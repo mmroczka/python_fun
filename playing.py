@@ -1,5 +1,23 @@
 from todoist.api import TodoistAPI
-token = '1abc92a3b1964c8188b305f84e6e0240ff9b702b'
-api = TodoistAPI(token)
-api.sync()
-print(api.state['projects'])
+
+f = open('token.txt', 'r')
+token = f.read()
+f.close()
+print(token)
+
+# api = TodoistAPI(token)
+# api.sync()
+# projects = api.state['projects']
+
+# How to add a project
+# project1 = api.projects.add('ProjectToAdd')
+# api.commit()
+#
+# Add a new task
+# task = api.items.add('Task Name', project1['id'])
+
+
+
+#
+# for p in projects:
+#     print(p)
